@@ -1,1 +1,2 @@
 42H49E6592N955LSL7VJB9JP --- sendgrid recovery code
+Dynamodb server starting command:  java -D"java.library.path=C:\Users\Aishwarya\Downloads\DynamoDBLocal_lib\DynamoDBLocal_lib" -jar "C:\Users\Aishwarya\Downloads\DynamoDBLocal_lib\DynamoDBLocal.jar" -sharedDb
