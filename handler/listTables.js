@@ -1,4 +1,4 @@
-const {  listAllTables } = require("../services/dbCalls");
+const {  listAllTables, listAllItems } = require("../services/dbCalls");
 exports.handler = async (event) => {
   console.log('Received event:', JSON.stringify(event, null, 2));
   const tables = await listAllTables();
@@ -9,8 +9,17 @@ exports.handler = async (event) => {
     body: tables,
   };
   return response
+};
 
+exports.handlerListAllItems = async (event) => {
+  const data = await listAllItems(event);
+  console.log('List of items:', data);
 
+  const response = {
+    statusCode: 200,
+    body: data,
+  };
+  return response
 };
 
 
