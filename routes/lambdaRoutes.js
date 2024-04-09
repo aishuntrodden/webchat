@@ -22,7 +22,7 @@ router.get('/listTables', async (req, res) => {
 router.get('/createChatTable', async (req, res) => {
 
     try {
-        const response = await createChatTable.handler(event);
+        const response = await createChatTable.handler();
         req.app.locals.logger.info('Response sent successfully by lambda.');
         res.status(response.statusCode).send(response.body);
 

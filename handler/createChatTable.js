@@ -1,6 +1,6 @@
 const { createTable } = require("../services/dbCalls");
 exports.handler = async (event) => {
-  console.log('Received event:', JSON.stringify(event, null, 2));
+  console.log('Received event:CreateTable');
   const tables = await createTable();
   console.log('Table created successfully', tables);
 
